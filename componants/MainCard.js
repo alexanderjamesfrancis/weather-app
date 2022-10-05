@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { ctof } from "../services/converters"
-import styles from "./MainCard.modules.css"
+import styles from "./MainCard.module.css"
 
 export const MainCard =({
     city,
@@ -16,7 +16,7 @@ return (
             {city}, {country}
         </h1>
         <p className={styles.description}>{description}</p>
-        <image
+        <Image
             width="300px"
             height="300px"
             src={`/icons/${iconName}.svg`}
@@ -24,13 +24,14 @@ return (
         />
         <h1 className={styles.temperature}>
             {unitSystem =="metric"
-            ?Math.round(weatherData.main.temp)
+            ? Math.round(weatherData.main.temp)
             : Math.round(ctof(weatherData.main.temp))}
             °{unitSystem =="metric" ? "C" : "F"}
         </h1>
         <p>
+            Feels Like{" "}
             {unitSystem == "metric"
-            ? Math.round(weatherData.main.feels__like)
+            ? Math.round(weatherData.main.feels_like)
             : Math.round(ctof(weatherData.main.feels_like))}
             °{unitSystem =="metric" ? "C" : "F"}
         </p>

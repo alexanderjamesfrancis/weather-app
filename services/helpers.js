@@ -5,7 +5,12 @@ import {
     timeTo12HourFormat
 } from "./converters"
 
-export const getWindSpeed = (unitSystem, visibilityInMeters) =>
+export const getWindSpeed = (unitSystem, windInMps) =>
+    unitSystem == "metric"
+    ? windInMps : mpsToMph(windInMps)
+
+
+export const getVisibility = (unitSystem, visibilityInMeters) =>
     unitSystem == "metric"
     ? (visibilityInMeters/ 1000).toFixed(1)
     : kmTOMiles(visibilityInMeters /1000)
