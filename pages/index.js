@@ -33,7 +33,7 @@ const App = () => {
         getData()    
         }, [triggerFetch])
 
-    //console.log(weatherData);
+    console.log(weatherData);
     
     const changeSystem = () => 
         unitSystem == ""

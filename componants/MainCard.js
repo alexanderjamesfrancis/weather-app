@@ -24,7 +24,7 @@ return (
         />
         <h1 className={styles.temperature}>
             {unitSystem =="metric"
-            ? Math.round(weatherData.main.temp)
+            ? Math.round(weatherData.main.temp - 273.15)
             : Math.round(ctof(weatherData.main.temp))}
             °{unitSystem =="metric" ? "C" : "F"}
         </h1>
