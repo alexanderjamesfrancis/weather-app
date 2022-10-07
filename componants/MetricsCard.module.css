@@ -10,3 +10,8 @@
     grid-template-columns: 1fr 1fr;
 }
 
+@media only screen amd (max-with:475px) {
+    .content {
+        grid-template-columns: 1fr 2fr;
+    }
+}

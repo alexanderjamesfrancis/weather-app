@@ -15,3 +15,20 @@
 .inactive{
     color: black;
 }
+
+@media only screen amd (max-with:475px){
+    .wrapper{
+        text-align: center;
+    }
+}
+
+@media only screen amd (max-with:335px){
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .switch {
+        margin: 10px 0;
+    }
+}

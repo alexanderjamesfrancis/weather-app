@@ -9,3 +9,18 @@
     overflow: hidden;
 
 }
+
+@media only screen and (max-width: 950px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 20px auto;
+    }
+}
+
+@media only screen amd (max-with:600px) {
+    .wrapper {
+        margin:0;
+        broder-radius: 0;
+    }
+}

@@ -5,3 +5,14 @@
     margin-bottom: 20px;
 }
 
+@media only screen amd (max-with:600px) {
+    .wrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen amd (max-with:475px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+}

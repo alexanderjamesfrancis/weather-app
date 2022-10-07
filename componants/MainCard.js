@@ -25,14 +25,14 @@ return (
         <h1 className={styles.temperature}>
             {unitSystem =="metric"
             ? Math.round(weatherData.main.temp - 273.15)
-            : Math.round(ctof(weatherData.main.temp))}
+            : Math.round(ctof((weatherData.main.feels_like) - 273.15) * 9/5 + 32)}
             °{unitSystem =="metric" ? "C" : "F"}
         </h1>
         <p>
             Feels Like{" "}
             {unitSystem == "metric"
-            ? Math.round(weatherData.main.feels_like)
-            : Math.round(ctof(weatherData.main.feels_like))}
+            ? Math.round(weatherData.main.feels_like - 273.15) 
+            : Math.round(ctof((weatherData.main.feels_like) - 273.15) * 9/5 + 32)}
             °{unitSystem =="metric" ? "C" : "F"}
         </p>
     </div>

@@ -14,7 +14,7 @@ import styles from "../styles/Home.module.css"
 
 const App = () => {
 
-    const [cityInput, setCityInput] = useState("Riga")
+    const [cityInput, setCityInput] = useState("Nottingham")
     const [triggerFetch, setTriggerFetch] = useState(true)
     const [weatherData, setWeatherData] = useState()
     const [unitSystem, setUnitSystem] = useState("metric")
@@ -36,7 +36,7 @@ const App = () => {
     console.log(weatherData);
     
     const changeSystem = () => 
-        unitSystem == ""
+        unitSystem == "metric"
             ? setUnitSystem("imperial")
             : setUnitSystem("metric")
 

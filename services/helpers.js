@@ -38,6 +38,6 @@ export const getWeekDay = (weatherData) => {
         "Saturday"
     ]
     return weekday[
-        new Date((weatherData.dt + weatherData.timezone) * 1000).getUTCDate()
+        new Date((weatherData.dt + weatherData.timezone) * 1000).getUTCDay()
     ]
 }    
